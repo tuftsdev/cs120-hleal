@@ -9,7 +9,7 @@ body {
 @media only screen and (min-resolution: 1201px) {
     .homer {
         background-image: url(responsive/homer.jpeg);
-        background-position: left 166.5px, 25%;
+        background-position: top left;
     }
 }
 
@@ -23,14 +23,14 @@ body {
 @media only screen and (max-resolution: 1100px) {
     .homer {
         background-image: url(responsive/homer.jpeg);
-        background-position: center left;
+        background-position: ;
     }
 }
 
 @media only screen and (max-resolution: 1000px) {
     .homer {
         background-image: url(responsive/homer.jpeg);
-        background-position: center right;
+        background-position: ;
     }
 }
 
