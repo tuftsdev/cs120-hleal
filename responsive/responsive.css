@@ -1,63 +1,63 @@
 body {
-    background-image: url(responsive/homer.jpeg);
+    background-image: url(homer.jpeg);
 }
 
 .homer {
-    background-image: url(responsive/homer.jpeg);
+    background-image: url(homer.jpeg);
 }
 
 @media only screen and (min-resolution: 1201px) {
     .homer {
-        background-image: url(responsive/homer.jpeg);
+        background-image: url(homer.jpeg);
         background-position: top 0% bottom 75% left 0% right 50%;
     }
 }
 
 @media only screen and (max-resolution: 1200px) {
     .homer {
-        background-image: url(responsive/homer.jpeg);
+        background-image: url(homer.jpeg);
         background-position: top 0% bottom 75% left 50% right 0%;
     }
 }
 
 @media only screen and (max-resolution: 1100px) {
     .homer {
-        background-image: url(responsive/homer.jpeg);
+        background-image: url(homer.jpeg);
         background-position: top 25% bottom 50% left 0% right 50%;
     }
 }
 
 @media only screen and (max-resolution: 1000px) {
     .homer {
-        background-image: url(responsive/homer.jpeg);
+        background-image: url(homer.jpeg);
         background-position: top 25% bottom 50% left 50% right 0%;
     }
 }
 
 @media only screen and (max-resolution: 900px) {
     .homer {
-        background-image: url(responsive/homer.jpeg);
+        background-image: url(homer.jpeg);
         background-position: top 75% bottom 25% left 0% right 50%;
     }
 }
 
 @media only screen and (max-resolution: 800px) {
     .homer {
-        background-image: url(responsive/homer.jpeg);
+        background-image: url(homer.jpeg);
         background-position: top 75% bottom 25% left 50% right 0%;
     }
 }
 
 @media only screen and (max-resolution: 700px) {
     .homer {
-        background-image: url(responsive/homer.jpeg);
+        background-image: url(homer.jpeg);
         background-position: top 75% bottom 0% left 0% right 50%;
     }
 }
 
 @media only screen and (max-resolution: 600px) {
     .homer {
-        background-image: url(responsive/homer.jpeg);
+        background-image: url(homer.jpeg);
         background-position: top 75% bottom 0% left 50% right 0%;
     }
 }
