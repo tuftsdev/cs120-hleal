@@ -1,0 +1,59 @@
+.homer {
+    background-image: responsive/homer.jpeg;
+}
+
+@media only screen and (min-resolution: 1201px) {
+    .homer {
+        background-image: responsive/homer.jpeg;
+        background-position: left 166.5px, 25%;
+    }
+}
+
+@media only screen and (max-resolution: 1200px) {
+    .homer {
+        background-image: responsive/homer.jpeg;
+        background-position: top right;
+    }
+}
+
+@media only screen and (max-resolution: 1100px) {
+    .homer {
+        background-image: responsive/homer.jpeg;
+        background-position: center left;
+    }
+}
+
+@media only screen and (max-resolution: 1000px) {
+    .homer {
+        background-image: responsive/homer.jpeg;
+        background-position: center right;
+    }
+}
+
+@media only screen and (max-resolution: 900px) {
+    .homer {
+        background-image: responsive/homer.jpeg;
+        background-position: ;
+    }
+}
+
+@media only screen and (max-resolution: 800px) {
+    .homer {
+        background-image: responsive/homer.jpeg;
+        background-position: ;
+    }
+}
+
+@media only screen and (max-resolution: 700px) {
+    .homer {
+        background-image: responsive/homer.jpeg;
+        background-position: ;
+    }
+}
+
+@media only screen and (max-resolution: 600px) {
+    .homer {
+        background-image: responsive/homer.jpeg;
+        background-position: ;
+    }
+}
