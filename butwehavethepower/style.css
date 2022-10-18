@@ -1,6 +1,8 @@
 body {
     text-align: center;
-    font: Georgia;   
+    font: Georgia;
+    color: lightseagreen;
+    font-weight: 200;
 }
 
 h1 {
