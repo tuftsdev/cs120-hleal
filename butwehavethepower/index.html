@@ -18,8 +18,8 @@
     var video = document.getElementById("video");
     var caption = document.getElementById("captions");
     var timer = document.getElementbyId("timer");
-    document.addEventListener("timeupdate", function(){
-        console.log(caption.innerHTML);
+    video.addEventListener("timeupdate", function(){
+        console.log(event);
         timer.innerHTML = video.currentTime;
 
         if (video.currentTime > 5 && video.currentTime < 7) {
