@@ -13,71 +13,70 @@
 <video src="https://www.cs.tufts.edu/comp/120/butwehavethepower.mp4" id="butwehavethepower" controls></video>
 <div id="lyrics"></div>
 
-<script type=""text/javascript">
+<script type="text/javascript">
 
     var video = document.getElementById("video");
     var caption = document.getElementById("captions");
-    var image = document.getElementbyId("Image");
     var timer = document.getElementbyId("timer");
-    video.addEventListener("timeupdate", function() {
-        console.log("The currentTime attribute has been updated.");
+    document.addEventListener("timeupdate", function(){
+        console.log(caption.innerHTML);
         timer.innerHTML = video.currentTime;
 
         if (video.currentTime > 5 && video.currentTime < 7) {
-            caption.innerHTML ="<h3>Lisa: Come gather round, children,</h3>";
+            caption.innerHTML ="Lisa: Come gather round, children,";
         }
         else if (video.currentTime > 7 && video.currentTime < 10) {
-            caption.innerHTML = "<h3>It's high time ye learned</h3>";
+            caption.innerHTML = "It's high time ye learned";
         }
         else if (video.currentTime > 10 && video.currentTime < 12) {
-            caption.innerHTML = "<h3>'Bout a hero named Homer</h3>";
+            caption.innerHTML = "'Bout a hero named Homer";
         }
         else if (video.currentTime > 13 && video.currentTime < 16) {
-            caption.innerHTML = "<h3>And a devil named Burns.</h3>";
+            caption.innerHTML = "And a devil named Burns.";
         }
         else if (video.currentTime > 17 && video.currentTime < 18) {
-            caption.innerHTML = "<h3>We'll march 'till we drop</h3>";
+            caption.innerHTML = "We'll march 'till we drop";
         }
         else if (video.currentTime > 19 && video.currentTime < 21) {
-            caption.innerHTML = "<h3>The girls and the fellas.</h3>";
+            caption.innerHTML = "The girls and the fellas.";
         }
         else if (video.currentTime > 21 && video.currentTime < 22) {
-            caption.innerHTML = "<h3>We'll fight 'till the death</h3>";
+            caption.innerHTML = "We'll fight 'till the death";
         }
         else if (video.currentTime > 23 && video.currentTime < 27) {
-            caption.innerHTML = "<h3>Or else fold like umbrellas.</h3>";
+            caption.innerHTML = "Or else fold like umbrellas.";
         }
         else if (video.currentTime > 37 && video.currentTime < 40) {
-            caption.innerHTML = "<h3>So we'll march day and night</h3>";
+            caption.innerHTML = "So we'll march day and night";
         }
         else if (video.currentTime > 41 && video.currentTime < 42) {
-            caption.innerHTML = "<h3>By the big cooling tower.</h3>";
+            caption.innerHTML = "By the big cooling tower.";
         }
         else if (video.currentTime > 43 && video.currentTime < 44) {
-            caption.innerHTML = "<h3>They have the plant</h3>";
+            caption.innerHTML = "They have the plant";
         }
         else if (video.currentTime > 45 && video.currentTime < 49) {
-            caption.innerHTML = "<h3>But we have the power.</h3>";
+            caption.innerHTML = "But we have the power.";
         }
         else if (video.currentTime > 52 && video.currentTime < 54) {
-            caption.innerHTML = "<h3>Lenny: Now do "Classical Gas!"</h3>";
+            caption.innerHTML = "Lenny: Now do Classical Gas!";
         }
         else if (video.currentTime > 72 && video.currentTime < 74) {
-            caption.innerHTML = "<h3>So we'll march day and night</h3>";
+            caption.innerHTML = "So we'll march day and night";
         }
         else if (video.currentTime > 75 && video.currentTime < 77) {
-            caption.innerHTML = "<h3>By the big cooling tower.</h3>";
+            caption.innerHTML = "By the big cooling tower.";
         }
         else if (video.currentTime > 78 && video.currentTime < 79) {
-            caption.innerHTML = "<h3>They have the plant</h3>";
+            caption.innerHTML = "They have the plant";
         }
         else if (video.currentTime > 80 && video.currentTime < 81) {
-            caption.innerHTML = "<h3>But we have the power.</h3>";
+            caption.innerHTML = "But we have the power.";
         }
         else {
             caption.innerHTML ="";
         }
-    }, false);
+        });
 </script>
 </body>
 </html>	
