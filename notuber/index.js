@@ -1,4 +1,4 @@
-let map;
+//let map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
@@ -30,14 +30,15 @@ function setMarkers(map) {
 window.initMap = initMap;
 
 // Create the script tag, set the appropriate attributes
-var script = document.createElement('script');
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBhXJr5eCkwhUUWGi7t1Hpi8Uo8PRHkH64&callback=initMap&region=US';
-script.async = true;
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap&v=weekly"
+    defer
+  ></script>
 
 // Attach your callback function to the `window` object
-//window.initMap = function() {
+window.initMap = function() {
   // JS API is loaded and available
-//};
+};
 
 // Append the 'script' element to 'head'
-//document.head.appendChild(script);
+document.head.appendChild(script);
