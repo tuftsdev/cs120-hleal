@@ -14,69 +14,67 @@
 <div id="lyrics"></div>
 
 <script type="text/javascript">
-
     var video = document.getElementById("video");
-    var caption = document.getElementById("captions");
-    var timer = document.getElementbyId("timer");
-    video.addEventListener("timeupdate", function(){
-        console.log(event);
-        timer.innerHTML = video.currentTime;
+    var lyric = document.getElementById("lyrics");
+    video.addEventListener("timeupdate", function() {
+        console.log("lyrics");
+        lyric.innerHTML = video.currentTime;
 
         if (video.currentTime > 5 && video.currentTime < 7) {
-            caption.innerHTML ="Lisa: Come gather round, children,";
+            lyric.innerHTML ="Lisa: Come gather round, children,";
         }
         else if (video.currentTime > 7 && video.currentTime < 10) {
-            caption.innerHTML = "It's high time ye learned";
+            lyric.innerHTML = "It's high time ye learned";
         }
         else if (video.currentTime > 10 && video.currentTime < 12) {
-            caption.innerHTML = "'Bout a hero named Homer";
+            lyric.innerHTML = "'Bout a hero named Homer";
         }
         else if (video.currentTime > 13 && video.currentTime < 16) {
-            caption.innerHTML = "And a devil named Burns.";
+            lyric.innerHTML = "And a devil named Burns.";
         }
         else if (video.currentTime > 17 && video.currentTime < 18) {
-            caption.innerHTML = "We'll march 'till we drop";
+            lyric.innerHTML = "We'll march 'till we drop";
         }
         else if (video.currentTime > 19 && video.currentTime < 21) {
-            caption.innerHTML = "The girls and the fellas.";
+            lyric.innerHTML = "The girls and the fellas.";
         }
         else if (video.currentTime > 21 && video.currentTime < 22) {
-            caption.innerHTML = "We'll fight 'till the death";
+            lyric.innerHTML = "We'll fight 'till the death";
         }
         else if (video.currentTime > 23 && video.currentTime < 27) {
-            caption.innerHTML = "Or else fold like umbrellas.";
+            lyric.innerHTML = "Or else fold like umbrellas.";
         }
         else if (video.currentTime > 37 && video.currentTime < 40) {
-            caption.innerHTML = "So we'll march day and night";
+            lyric.innerHTML = "So we'll march day and night";
         }
         else if (video.currentTime > 41 && video.currentTime < 42) {
-            caption.innerHTML = "By the big cooling tower.";
+            lyric.innerHTML = "By the big cooling tower.";
         }
         else if (video.currentTime > 43 && video.currentTime < 44) {
-            caption.innerHTML = "They have the plant";
+            lyric.innerHTML = "They have the plant";
         }
         else if (video.currentTime > 45 && video.currentTime < 49) {
-            caption.innerHTML = "But we have the power.";
+            lyric.innerHTML = "But we have the power.";
         }
         else if (video.currentTime > 52 && video.currentTime < 54) {
-            caption.innerHTML = "Lenny: Now do Classical Gas!";
+            lyric.innerHTML = "Lenny: Now do Classical Gas!";
         }
         else if (video.currentTime > 72 && video.currentTime < 74) {
-            caption.innerHTML = "So we'll march day and night";
+            lyric.innerHTML = "So we'll march day and night";
         }
         else if (video.currentTime > 75 && video.currentTime < 77) {
-            caption.innerHTML = "By the big cooling tower.";
+            lyric.innerHTML = "By the big cooling tower.";
         }
         else if (video.currentTime > 78 && video.currentTime < 79) {
-            caption.innerHTML = "They have the plant";
+            lyric.innerHTML = "They have the plant";
         }
         else if (video.currentTime > 80 && video.currentTime < 81) {
-            caption.innerHTML = "But we have the power.";
+            lyric.innerHTML = "But we have the power.";
         }
         else {
-            caption.innerHTML ="";
+            lyric.innerHTML ="";
         }
-        });
+        }, false);
 </script>
 </body>
 </html>	
