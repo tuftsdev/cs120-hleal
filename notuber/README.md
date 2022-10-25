@@ -5,3 +5,4 @@
 DOMContentLoaded: 153 ms
 Load: 578 ms
 index.js file size: 936 B, time: 5 ms
+index.html file size: 1.1 kB, time: 11 ms
