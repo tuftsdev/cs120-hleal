@@ -5,7 +5,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 42.352271, lng: -71.05524200000001 },
     zoom: 12,
-    mapTypeId: 'roadmap'
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   });
   setMarkers(map);
 }
@@ -22,9 +22,9 @@ function initMap() {
 function setMarkers(map) {
   const image = "notuber/car.png";
 
-  marker = new google.maps.Marker({
+  var marker = new google.maps.Marker({
     position: { lat: cars[1], lng: cars[2] },
-    map,
+    map: map,
     icon: image,
     title: cars[0],
   });
