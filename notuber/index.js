@@ -1,9 +1,11 @@
-//let map;
+var map;
+var marker;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 42.352271, lng: -71.05524200000001 },
     zoom: 12,
+    mapTypeId: 'roadmap'
   });
   setMarkers(map);
 }
@@ -29,16 +31,7 @@ function setMarkers(map) {
 
 window.initMap = initMap;
 
-// Create the script tag, set the appropriate attributes
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap&v=weekly"
-    defer
-  ></script>
-
-// Attach your callback function to the `window` object
-window.initMap = function() {
-  // JS API is loaded and available
-};
-
-// Append the 'script' element to 'head'
-document.head.appendChild(script);
+  //<script
+    //src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap&v=weekly"
+    //defer
+  //></script>
