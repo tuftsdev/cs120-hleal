@@ -1,4 +1,4 @@
-1. I'm still working to implement the html and js files correctly to get the map to render.
+1. I've worked to get the map to render, but am still attempting to get the markers to render on the map.
 2. I posted in Piazza, but other than that have not collaborated with anyone.
 3. I have spent approximately 5 hours on this lab.
 4. Before any performance optimizations were made:
