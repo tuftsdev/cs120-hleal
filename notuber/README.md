@@ -2,7 +2,8 @@
 2. I posted in Piazza, but other than that have not collaborated with anyone.
 3. I have spent approximately 5 hours on this lab.
 4. Before any performance optimizations were made:
-DOMContentLoaded: 153 ms
-Load: 578 ms
-index.js file size: 936 B, time: 5 ms
-index.html file size: 1.1 kB, time: 11 ms
+DOMContentLoaded: 210 ms
+Load: 621 ms
+localhost size: 791 B
+style.css size: 305 B
+index.js size: 1.4 kB
