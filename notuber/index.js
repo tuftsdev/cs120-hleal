@@ -15,35 +15,40 @@ function initMap() {
     title: "mXfkjrFw",
   });
 
-  marker = new google.maps.marker({
+  marker = new google.maps.Marker({
     position: new google.maps.LatLng(42.3662, -71.0621),
     map: map,
     icon: "./car.png",
     title: "nZXB8ZHz",
   });
-}
 
-
-
-/*var cars = [
-  ["mXfkjrFw", 42.3453, -71.0464, 1],
-  ["nZXB8ZHz", 42.3662, -71.0621, 2],
-  ["Tkwu74WC", 42.3603, -71.0547, 3],
-  ["5KWpnAJN", 42.3472, -71.0802, 4],
-  ["uf5ZrXYw", 42.3663, -71.0544, 5],
-  ["VMerzMH8", 42.3542, -71.0704, 6],
-];
-
-function setMarkers(map) {
-  const image = "notuber/car.png";
-
-  var marker = new google.maps.Marker({
-    position: { lat: cars[1], lng: cars[2] },
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(42.3603, -71.0547),
     map: map,
-    icon: image,
-    title: cars[0],
+    icon: "./car.png",
+    title: "Tkwu74WC",
   });
-  marker.setMap(map);
-}*/
+
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(42.3472, -71.0802),
+    map: map,
+    icon: "./car.png",
+    title: "5KWpnAJN",
+  });
+
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(42.3663, -71.0544),
+    map: map,
+    icon: "./car.png",
+    title: "uf5ZrXYw",
+  });
+
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(42.3542, -71.0704),
+    map: map,
+    icon: "./car.png",
+    title: "VMerzMH8",
+  });
+}
 
 window.initMap = initMap;
