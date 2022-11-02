@@ -14,6 +14,13 @@ function initMap() {
     icon: "./car.png",
     title: "mXfkjrFw",
   });
+
+  marker = new google.maps.marker({
+    position: new google.maps.LatLng(42.3662, -71.0621),
+    map: map,
+    icon: "./car.png",
+    title: "nZXB8ZHz",
+  });
 }
 
 
