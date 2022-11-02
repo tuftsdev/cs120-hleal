@@ -1,4 +1,4 @@
-1. I've worked to get the map to render, but am still attempting to get the markers to render on the map.
+1. I've gotten the map and one marker to render, but am still working to get all markers to render.
 2. I posted in Piazza, but other than that have not collaborated with anyone.
 3. I have spent approximately 5 hours on this lab.
 4. Before any performance optimizations were made:
