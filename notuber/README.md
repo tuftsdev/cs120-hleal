@@ -2,6 +2,7 @@
 2. I posted in Piazza, but other than that have not collaborated with anyone.
 3. I have spent approximately 5 hours on this lab.
 4. Performance Enhancements
+
 **Before any performance optimizations were made:**
 <p>DOMContentLoaded: 210 ms<br>
 Load: 621 ms<br>
