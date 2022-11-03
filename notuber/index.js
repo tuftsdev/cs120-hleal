@@ -3,7 +3,7 @@ var myLng = 0;
 var me = new google.maps.LatLng(myLat, myLng);
 var myOptions = {
   zoom: 12,
-  center: me,
+  center: (myLat, myLng),
   mapTypeId: google.maps.MapTypeId.ROADMAP
 };
 var map;
@@ -43,6 +43,30 @@ function renderMap() {
     infowindow.setContent(marker.title);
     infowindow.open(map, marker);
   });
+}
+
+function sendJSON() {
+  let result = document.querySelector(".result");
+  let username = document.querySelector("#username");
+  let lat = document.querySelector("myLat");
+  let lng = document.querySelector("myLng");
+
+  let xhr = new XMLHttpRequest();
+  let url = "https://jordan-marsh.herokuapp.com/rides";
+
+  xhr.open("POST", url, true);
+
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      result.innerHTML = this.responseText;
+    }
+  };
+
+  var data = JSON.stringify({"username": username.value, "lat": lat.value, "lng": lng.value});
+
+  xhr.send(data);
 }
 
 /* From Lab 8, initializing map
