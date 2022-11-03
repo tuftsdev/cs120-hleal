@@ -1,13 +1,61 @@
+var myLat = 0;
+var myLng = 0;
+var me = new google.maps.LatLng(myLat, myLng);
+var myOptions = {
+  zoom: 12,
+  center: me,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+};
 var map;
 var marker;
+var infowindow = new google.maps.InfoWindow();
 
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), myOptions);
+  getMyLocation();
+}
+
+function getMyLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      myLat = position.coords.latitude;
+      myLng = position.coords.longitude;
+      renderMap();
+    });
+  }
+  else {
+    alert("Geolocation is not supported by your web browser.")
+  }
+}
+
+function renderMap() {
+  me = new google.maps.LatLng(myLat, myLng);
+
+  map.panTo(me);
+
+  marker = new google.maps.Marker({
+    position: me,
+    title: "You are here."
+  });
+  marker.setMap(map);
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(marker.title);
+    infowindow.open(map, marker);
+  });
+}
+
+/* From Lab 8, initializing map
 function initMap() {
   var map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 42.352271, lng: -71.05524200000001 },
     zoom: 12,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
+  infoWindow = new google.maps.InfoWindow();
 
+
+//From Lab 8, setting markers to map
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(42.3453, -71.0464),
     map: map,
@@ -50,5 +98,5 @@ function initMap() {
     title: "VMerzMH8",
   });
 }
-
+*/
 window.initMap = initMap;
