@@ -23,6 +23,6 @@ minifiedindex.js size: 1.1 kB</p>
 Other than that, it is clear that the optimizations made with the css file and js file both helped to reduce file size. the css file reduced by 54 B and the js file reduced by .3 kB.</p>
 
 ## Lab 10
-1. So far, I have determined and marked my location on the map.
+1. So far, I have determined and marked my location on the map. I have added a function to load the rides.
 2. I have not collaborated with anyone on this lab.
 3. I have spent about 6 hours on this lab.
