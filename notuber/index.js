@@ -45,20 +45,25 @@ function renderMap() {
   });
 }
 
-var http = new XMLHttpRequest();
-var url = 'get_data.php';
-var params = 'orem=ipsum&name=binny';
-http.open('POST', url, true);
+function loadRides() {
+  console.log("Inside loadCars() JavaScript function...");
 
-//Send the proper header information along with the request
-http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  console.log("Making instance of XHR...");
+  request = new XMLHttpRequest();
 
-http.onreadystatechange = function() {//Call a function when the state changes.
-    if(http.readyState == 4 && http.status == 200) {
-        alert(http.responseText);
+  console.log("Opening XHR...");
+  request.open("GET", "https://jordan-marsh.herokuapp.com/rides");
+
+  request.onreadystatechange = function() {
+    console.log("Ready state has changed! Inside of callback() function")
+    console.log("readyState == " + request.readyState);
+    if (request.readyState == 4 && request.status == 200) {
+      resultingData = request.responseText;
+      ridesData = JSON.parse(resultingData);
+      
     }
+  }
 }
-http.send(params);
 
 /* From Lab 8, initializing map
 function initMap() {
