@@ -25,4 +25,4 @@ Other than that, it is clear that the optimizations made with the css file and j
 ## Lab 10
 1. So far, I have determined and marked my location on the map.
 2. I have not collaborated with anyone on this lab.
-3. I have spent about 5 hours on this lab.
+3. I have spent about 6 hours on this lab.
