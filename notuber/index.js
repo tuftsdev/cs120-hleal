@@ -60,7 +60,7 @@ function loadRides() {
     if (request.readyState == 4 && request.status == 200) {
       resultingData = request.responseText;
       ridesData = JSON.parse(resultingData);
-      
+
     }
   }
 }
