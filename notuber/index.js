@@ -3,7 +3,7 @@ var myLng = 0;
 var me = new google.maps.LatLng(myLat, myLng);
 var myOptions = {
   zoom: 12,
-  center: (myLat, myLng),
+  center: me,
   mapTypeId: google.maps.MapTypeId.ROADMAP
 };
 var map;
@@ -45,29 +45,20 @@ function renderMap() {
   });
 }
 
-function sendJSON() {
-  let result = document.querySelector(".result");
-  let username = document.querySelector("#username");
-  let lat = document.querySelector("myLat");
-  let lng = document.querySelector("myLng");
+var http = new XMLHttpRequest();
+var url = 'get_data.php';
+var params = 'orem=ipsum&name=binny';
+http.open('POST', url, true);
 
-  let xhr = new XMLHttpRequest();
-  let url = "https://jordan-marsh.herokuapp.com/rides";
+//Send the proper header information along with the request
+http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
-  xhr.open("POST", url, true);
-
-  xhr.setRequestHeader("Content-Type", "application/json");
-
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      result.innerHTML = this.responseText;
+http.onreadystatechange = function() {//Call a function when the state changes.
+    if(http.readyState == 4 && http.status == 200) {
+        alert(http.responseText);
     }
-  };
-
-  var data = JSON.stringify({"username": username.value, "lat": lat.value, "lng": lng.value});
-
-  xhr.send(data);
 }
+http.send(params);
 
 /* From Lab 8, initializing map
 function initMap() {
