@@ -1,5 +1,3 @@
-const { request } = require("express");
-
 var myLat = 0;
 var myLng = 0;
 var me = new google.maps.LatLng(myLat, myLng);
@@ -65,10 +63,7 @@ function loadRides() {
 
     }
   }
-};
-
-console.log("Sending request...");
-request.send();
+}
 
 /* From Lab 8, initializing map
 function initMap() {
