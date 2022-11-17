@@ -24,7 +24,7 @@ app.post('/rides', function(request, response) {
                 }
             }
             else {
-                response.send('Error in data');
+                response.send({"error":"Whoops, something is wrong with your data!"});
             }
         }
     }
