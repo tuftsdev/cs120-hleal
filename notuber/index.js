@@ -1,3 +1,17 @@
+//const { request } = require("express");
+
+const express = require('express');
+const path = require('path');
+const PORT = process.env.PORT || 3000;
+
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .get('/rides', (req, res) => res.send('[]'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
 var myLat = 0;
 var myLng = 0;
 var me = new google.maps.LatLng(myLat, myLng);
@@ -52,7 +66,7 @@ function loadRides() {
   request = new XMLHttpRequest();
 
   console.log("Opening XHR...");
-  request.open("GET", "https://jordan-marsh.herokuapp.com/rides");
+  request.open("GET", "https://hidden-thicket-65890.herokuapp.com/rides");
 
   request.onreadystatechange = function() {
     console.log("Ready state has changed! Inside of callback() function")
@@ -63,7 +77,10 @@ function loadRides() {
 
     }
   }
-}
+};
+
+console.log("Sending request...");
+request.send();
 
 /* From Lab 8, initializing map
 function initMap() {
