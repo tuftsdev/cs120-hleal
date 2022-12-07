@@ -36,13 +36,14 @@
                 <img src="images/sqli2.png" alt="SQL Injection #2" /></li>
             <li>Resolution: Use prepared statements instead of string concatenation within the queries.</li>
         </ul>
-        <h3>Issue #3: </h3>
+        <h3>Issue #3: XSS Vulnerabilities</h3>
         <ul>
-            <li>Location:</li>
-            <li>Severity:</li>
-            <li>Description:</li>
-            <li>Proof of Vulnerability:</li>
-            <li>Resolution:</li>
+            <li>Location: Lines 101, 103, 107, 113</li>
+            <li>Severity: High</li>
+            <li>Description: In app.get('/') there are numerous instances of vulnerable code to XSS attacks.</li>
+            <li>Proof of Vulnerability: <br> 
+                <img src="images/xss.png" alt="XSS" /></li></li>
+            <li>Resolution: Validate data/user input. Additionally, encode all output from the application to browsers.</li>
         </ul>
     <h2>Conclusion</h2>
     <p>...</p>
