@@ -17,22 +17,24 @@
     <h2>Abstract of Findings</h2>
     <p>...</p>
     <h2>Issues Found</h2>
-        <h3>Issue #1: Bad Programming Practice - SSL</h3>
+        <h3>Issue #1: MITM Vulnerability - SSL</h3>
         <ul>
-            <li>Location: Line 11 of JS</li>
+            <li>Location: Line 11 of JS source code</li>
             <li>Severity: High. With rejectUnauthorized set to false, the code will continue to run even if the server's identity is not verified. This vulnerability could result in a MITM attack.</li>
             <li>Description: I found this issue by looking at the source code. It seemed strange to me that the ssl would not be required, so I did my own research on what this code snippet meant.</li>
             <li>Proof of Vulnerability: <br>
-            <img src="images/rejectunauthorized.png" alt="Reject Unauthorized" /></li>
+                <img src="images/rejectunauthorized.png" alt="Reject Unauthorized" /></li>
             <li>Resolution: Instead of setting 'rejectUnauthorized' to false, set 'rejectUnauthorized' to true. This will mean the code will throw an error if a secure connection is not established.</li>
         </ul>
-        <h3>Issue #2: </h3>
+        <h3>Issue #2: SQL Injection Vulnerabilities</h3>
         <ul>
-            <li>Location:</li>
-            <li>Severity:</li>
-            <li>Description:</li>
-            <li>Proof of Vulnerability:</li>
-            <li>Resolution:</li>
+            <li>Location: Line 72 and Line 87 of JS source code</li>
+            <li>Severity: High</li>
+            <li>Description: In both the app.get('/passenger.json') and the app.get('/vehicle.json'), the SQL statements allow for user input that can be manipulated to dump all data.</li>
+            <li>Proof of Vulnerabilities (2): <br> 
+                <img src="images/sqli1.png" alt="SQL Injection #1" /> <br>
+                <img src="images/sqli2.png" alt="SQL Injection #2" /></li>
+            <li>Resolution: Use prepared statements instead of string concatenation within the queries.</li>
         </ul>
         <h3>Issue #3: </h3>
         <ul>
