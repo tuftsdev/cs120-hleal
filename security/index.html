@@ -23,7 +23,7 @@
         <ul>
             <li>Location: Line 11 of JS source code</li>
             <li>Severity: High. With rejectUnauthorized set to false, the code will continue to run even if the server's identity is not verified. This vulnerability could result in a MITM attack.</li>
-            <li>Description: I found this issue by looking at the source code. It seemed strange to me that the ssl would not be required, so I did my own research on what this code snippet meant.</li>
+            <li>Description: I found this issue by looking at the source code. It seemed strange to me that the ssl would not be required, so I did further research on what this code snippet meant.</li>
             <li>Proof of Vulnerability: <br>
                 <img src="images/rejectunauthorized.png" alt="Reject Unauthorized" /></li>
             <li>Resolution: Instead of setting 'rejectUnauthorized' to false, set 'rejectUnauthorized' to true. This will mean the code will throw an error if a secure connection is not established.</li>
@@ -31,8 +31,8 @@
         <h3>Issue #2: SQL Injection Vulnerabilities</h3>
         <ul>
             <li>Location: Line 72 and Line 87 of JS source code</li>
-            <li>Severity: High</li>
-            <li>Description: In both the app.get('/passenger.json') and the app.get('/vehicle.json'), the SQL statements allow for user input that can be manipulated to dump all data.</li>
+            <li>Severity: High. In both the app.get('/passenger.json') and the app.get('/vehicle.json'), the SQL statements allow for user input that can be manipulated to dump all data.</li>
+            <li>Description: I found the issues by looking at the source code, and confirmed through OWASP ZAP.</li>
             <li>Proof of Vulnerabilities (2): <br> 
                 <img src="images/sqli1.png" alt="SQL Injection #1" /> <br>
                 <img src="images/sqli2.png" alt="SQL Injection #2" /></li>
@@ -40,14 +40,15 @@
         </ul>
         <h3>Issue #3: XSS Vulnerabilities</h3>
         <ul>
-            <li>Location: Lines 101, 103, 107, 113</li>
-            <li>Severity: High</li>
-            <li>Description: In app.get('/') there are numerous instances of vulnerable code to XSS attacks.</li>
+            <li>Location: JS source code; lines 101, 103, 107, 113</li>
+            <li>Severity: High. In app.get('/') there are numerous instances of vulnerable code to XSS attacks.</li>
+            <li>Description: I found these issues by looking at the source code, and confirmed through OWASP ZAP and Burp Suite.</li>
             <li>Proof of Vulnerabilities (multiple): <br> 
                 <img src="images/xss.png" alt="XSS" /></li></li>
             <li>Resolution: Validate data/user input. Additionally, encode all output from the application to browsers.</li>
         </ul>
     <h2>Conclusion</h2>
-    <p>...</p>
+    <p>The source code for this ride-hailing service contains many major and various minor security and privacy issues that should be immediately addressed. As long as this service is live for users, there are many vulnerable areas that an attacker could easily find and target.</p>
+    <p>When reviewing and updating this source code, I would highly recommend familiarizing oneself with the OWASP Top 10 (<a href="https://owasp.org/www-project-top-ten/">https://owasp.org/www-project-top-ten/</a>) and the 2022 CWE Top 25 Most Dangerous Software Errors (<a href="https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html">https://cwe.mitre.org/top25/archive/2022/2022_cwe_top25.html</a>), as the lists contain many - if not all - of the vulnerabilities found in this code.</p>
 </body>
 </html>
