@@ -11,11 +11,13 @@
 <body>
     <h1>Lab 13: Security and Privacy Assessment of Ride-Hailing Service</h1>
     <h2>Introduction</h2>
-    <p>...</p>
+    <p>I was hired as a security consultant to document and resolve security and privacy issues of a ride-hailing service. My findings below contain various high-risk vulnerabilities that should be addressed as soon as possible to prevent attacks on the system.</p>
     <h2>Methodology</h2>
-    <p>...</p>
+    <p>The first step in my process was to review the source code in depth, without any assistive tools. In my review, a few items stood out to me immediately. After documenting those items, I moved on to utilize Burp Suite and OWASP ZAP! to delve deeper into areas that appeared vulnerable, as well as areas that had not stood out to me prior.</p>
     <h2>Abstract of Findings</h2>
-    <p>...</p>
+    <p>In my research, I found an issue with the security layer verification, that would allow unauthorized sites to connect. This could result in a "Man-In-The-Middle" attack to the system.</p>
+    <p>Further, I discovered both SQL injection and Cross-Site Scripting vulnerabities. In a SQL injection attack, a malicious user could dump all data from the stored database with one command.<br>
+    In a Cross-Site Scripting attack, an attacker can perform many malicious tasks such as changing what content actually displays, impersonating a user, or at worst, taking over the entire functionality of the system and its contents.</p>
     <h2>Issues Found</h2>
         <h3>Issue #1: MITM Vulnerability - SSL</h3>
         <ul>
